@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Ramity\ClosetBundle\ClosetBundle(),
             new Ramity\PlannerBundle\PlannerBundle(),
             new Ramity\AuthBundle\AuthBundle(),
+            new Ramity\HubBundle\HubBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true))

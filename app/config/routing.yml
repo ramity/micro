@@ -1,3 +1,8 @@
+hub:
+    resource: "@HubBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 auth:
     resource: "@AuthBundle/Controller/"
     type:     annotation
