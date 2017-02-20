@@ -26,7 +26,7 @@ class FoodController extends Controller
 
         $foods = $em->getRepository('HealthBundle:Food')->findAll();
 
-        return $this->render('food/index.html.twig', array(
+        return $this->render('@HealthBundle/Resources/views/food/index.html.twig', array(
             'foods' => $foods,
         ));
     }
@@ -52,7 +52,7 @@ class FoodController extends Controller
             return $this->redirectToRoute('food_show', array('id' => $food->getId()));
         }
 
-        return $this->render('food/new.html.twig', array(
+        return $this->render('@HealthBundle/Resources/views/food/new.html.twig', array(
             'food' => $food,
             'form' => $form->createView(),
         ));
@@ -68,7 +68,7 @@ class FoodController extends Controller
     {
         $deleteForm = $this->createDeleteForm($food);
 
-        return $this->render('food/show.html.twig', array(
+        return $this->render('@HealthBundle/Resources/views/food/show.html.twig', array(
             'food' => $food,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -92,7 +92,7 @@ class FoodController extends Controller
             return $this->redirectToRoute('food_edit', array('id' => $food->getId()));
         }
 
-        return $this->render('food/edit.html.twig', array(
+        return $this->render('@HealthBundle/Resources/views/food/edit.html.twig', array(
             'food' => $food,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
